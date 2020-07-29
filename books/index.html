@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>书</title>
+
+
+    <style type="text/css">
+        button {
+            width: 200px;
+            padding: 8px;
+            background-color: #1ba784;
+            border-color: #57c3c2;
+            color: #fff;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -khtml-border-radius: 0;
+            /* for old Konqueror browsers */
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            font-weight: 900;
+            font-size: 125%;
+        }
+
+        button:active {
+            background-color: azure;
+            opacity: 0.5;
+        }
+
+        .content {
+            font-size: 150%;
+            text-align: center;
+            color: #80766e;
+           
+            
+           
+           
+        }
+    </style>
+
+    <script>
+        var books = new Array("《未来千年备忘录》 卡尔维诺",
+            "《我们的祖先》 卡尔维诺",
+            "《看不见的城市》 卡尔维诺",
+            "《西方哲学史》 罗素",
+            "《西方的智慧》 罗素",
+            "《权力论》 罗素",
+            "《德国诗选》 ",
+            "《提香的儿子》 缪塞",
+            "《大卫·科波菲尔》 狄更斯",
+        );
+        function getBook() {
+            var num = Math.floor((Math.random() * books.length));
+            console.log(num)
+            document.getElementById("book").innerHTML = books[num];
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+        <button onclick="getBook()">点我随机选一本书读</button>
+    </div>
+    <br>
+    <br>
+
+    <div class="content" id="book"></div>
+    <br>
+    <br>
+<!-- 
+    <h3 style="text-align: center;">闲咏</h3>
+    <p style="text-align: center;"> 唐 白居易</p>
+    <p style="text-align: center;">步月怜清景，眠松爱绿阴。 </p>
+    <p style="text-align: center;">早年诗思苦，晚岁道情深。 </p>
+    <p style="text-align: center;">夜学禅多坐，秋牵兴暂吟。 </p>
+    <p style="text-align: center;">悠然两事外，无处更留心。 </p>
+    <br> -->
+
+</body>
+
+</html>
