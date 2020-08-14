@@ -784,8 +784,8 @@ pre {
     content: "\f101";
     padding-left: 0.3em; }
   .readmore a:hover {
-    background: #F8F8F8;
-    border-bottom-color: #D26911; }
+    background: #e2e1e4;
+    border-bottom-color: #cfccc9; }
 
 /* syntax highlight*/
 figure.highlight,
