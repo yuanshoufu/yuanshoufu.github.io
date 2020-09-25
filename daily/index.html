@@ -29,7 +29,9 @@
         } catch (ex) { }
     }
     // window.setInterval("reinitIframe()", 200);
-
+    setTimeout(function(){
+    document.getElementById('btn').style.display='block';
+  }, 3000);
 </script>
 
 
@@ -56,13 +58,40 @@
         background-color: azure;
         opacity: 0.5;
     }
+    button:hover {
+        background-color: #20a162;
+        opacity: 0.5;
+    }
+
+    *{
+    margin:0;
+    padding:0;
+}
+html {
+  overflow-y: scroll;/*这一行代码会被 代码1 覆盖，我觉得是可以删除的，可能作者考虑到有可能下面的失效，那么不管有没有滚动条，在右边都会有一个灰色的区域，这也是一种解决方案，就是不管有没有滚动条，都预留位置，但是很难看啊*/
+}
+
+:root {
+  overflow-y: auto;/*代码1*/
+  overflow-x: hidden;/*横向就不使用滚动条*/
+}
+
+:root body {
+  position: absolute;/*很不好意思，至今我仍然不知道为什么要这句代码，知道了我再补充*/
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;/*超出100vw的内容都隐藏，实际我们设计的页面都不会超过100vw，而且一般会边距，所以一般滚动条的出现不会遮盖到内容*/
+}
+    
 </style>
 <!-- this.height=(article.document.body.scrollHeight);console.log(this.height)" -->
 
-<iframe id="article" name="article" width="100%" onload="reinitIframe()" src="/article/10879.html" frameborder="no"
+<iframe id="article" name="article" width="100%" onload="reinitIframe()" src="" frameborder="no"
     scrolling="no"></iframe>
 <br>
 <br>
-<div style="text-align: center;">
+<div id="btn" style="text-align: center;display: none;">
     <button onclick="getArticle()">换一篇</button>
-</div></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-book"> 文集</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8A%BD%E8%98%96%E9%9B%86/">芽蘖集</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8D%8F%E8%8B%92%E9%9B%86/">荏苒集</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-calendar-minus-o"> 最近</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/29/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(23)%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC/">晓出净慈寺送林子方</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/hello-world%20-%20%E5%89%AF%E6%9C%AC%20(40)%20-%20%E5%89%AF%E6%9C%AC/">静夜思</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/hhhh/">将进酒·君不见</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E7%90%B5%E7%90%B6%E8%A1%8C/">琵琶行 / 琵琶引</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">步月庐</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+</div></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-book"> 文集</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%8D%8F%E8%8B%92%E9%9B%86/">荏苒集</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-calendar-minus-o"> 最近</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/07/28/%E6%9E%95%E8%BE%B9%E4%BA%BA%20%E4%BA%8C%E9%A6%96/">枕边人 二首</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
